@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    Base() {
+        cout << "Constructor of base class" << endl;
+    }
+
+    ~Base() {
+        cout << "Destructor of base class" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    Derived() {
+        cout << "Constructor of derived class" << endl;
+    }
+
+    ~Derived() {
+        cout << "Destructor of derived class" << endl;
+    }
+};
+
+int main() {
+    Derived *ptr1 = new Derived();
+
+    delete ptr1;
+
+    return 0;
+}
